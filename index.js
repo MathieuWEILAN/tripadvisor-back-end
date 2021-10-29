@@ -25,6 +25,7 @@ app.post("/", (req, res) => {
   //   console.log(data);
 
   mailgun.messages().send(data, (error, body) => {
+    console.log(body);
     console.log(error);
     if (!error) {
       return res.json(body);
